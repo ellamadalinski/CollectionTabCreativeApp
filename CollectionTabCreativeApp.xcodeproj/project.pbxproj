@@ -14,6 +14,8 @@
 		B6B6676F27340AA300EF8FF6 /* CollectionTabCreativeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6B6676D27340AA300EF8FF6 /* CollectionTabCreativeApp.xcdatamodeld */; };
 		B6B6677127340AA600EF8FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B6677027340AA600EF8FF6 /* Assets.xcassets */; };
 		B6B6677427340AA600EF8FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B6677227340AA600EF8FF6 /* LaunchScreen.storyboard */; };
+		B6B6677C27340FD300EF8FF6 /* Basketball.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B6677B27340FD300EF8FF6 /* Basketball.swift */; };
+		B6B6677E27340FF000EF8FF6 /* Football.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B6677D27340FF000EF8FF6 /* Football.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B6B6677027340AA600EF8FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6B6677327340AA600EF8FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6B6677527340AA600EF8FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B6677B27340FD300EF8FF6 /* Basketball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basketball.swift; sourceTree = "<group>"; };
+		B6B6677D27340FF000EF8FF6 /* Football.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				B6B6676627340AA300EF8FF6 /* SceneDelegate.swift */,
 				B6B6676827340AA300EF8FF6 /* ViewController.swift */,
 				B6B6676A27340AA300EF8FF6 /* Main.storyboard */,
+				B6B6677D27340FF000EF8FF6 /* Football.swift */,
+				B6B6677B27340FD300EF8FF6 /* Basketball.swift */,
 				B6B6677027340AA600EF8FF6 /* Assets.xcassets */,
 				B6B6677227340AA600EF8FF6 /* LaunchScreen.storyboard */,
 				B6B6677527340AA600EF8FF6 /* Info.plist */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B6677E27340FF000EF8FF6 /* Football.swift in Sources */,
+				B6B6677C27340FD300EF8FF6 /* Basketball.swift in Sources */,
 				B6B6676F27340AA300EF8FF6 /* CollectionTabCreativeApp.xcdatamodeld in Sources */,
 				B6B6676927340AA300EF8FF6 /* ViewController.swift in Sources */,
 				B6B6676527340AA300EF8FF6 /* AppDelegate.swift in Sources */,
