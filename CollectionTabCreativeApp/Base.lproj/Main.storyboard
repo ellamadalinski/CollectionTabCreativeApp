@@ -3,38 +3,82 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPORTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wps-Yk-qOO">
+                                <rect key="frame" x="102" y="304" width="186" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="ZdJ-64-IuT"/>
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="ZdJ-64-IuT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="77.678571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Baseball-->
         <scene sceneID="yZc-9r-r8i">
             <objects>
-                <viewController id="WZP-WY-xaB" sceneMemberID="viewController">
+                <viewController title="Baseball" id="WZP-WY-xaB" customClass="BaseballVC" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ut6-n4-oeq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-IR-mxb">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lUW-OK-kMs">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="ZOZ-nb-gPf">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RaJ-E1-04F">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cZo-hd-TC2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cZo-hd-TC2" firstAttribute="bottom" secondItem="2Tq-IR-mxb" secondAttribute="bottom" id="P3A-Qp-WrM"/>
+                            <constraint firstItem="2Tq-IR-mxb" firstAttribute="top" secondItem="cZo-hd-TC2" secondAttribute="top" id="QbL-dB-BUj"/>
+                            <constraint firstItem="cZo-hd-TC2" firstAttribute="trailing" secondItem="2Tq-IR-mxb" secondAttribute="trailing" id="Z0u-Ke-x21"/>
+                            <constraint firstItem="2Tq-IR-mxb" firstAttribute="leading" secondItem="cZo-hd-TC2" secondAttribute="leading" id="fbb-RU-iC4"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" id="BgW-2q-ANJ"/>
+                    <tabBarItem key="tabBarItem" image="baseball" id="BgW-2q-ANJ"/>
+                    <connections>
+                        <outlet property="collectionViewOutlet" destination="2Tq-IR-mxb" id="5uV-V2-nqI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwS-Hx-I8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,30 +87,30 @@
         <!--Football-->
         <scene sceneID="jeN-WG-6Uh">
             <objects>
-                <viewController id="nN4-Dr-T13" sceneMemberID="viewController">
+                <viewController title="Football" id="nN4-Dr-T13" customClass="FootballVC" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PoV-g4-ENk">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="30p-ZC-CFg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Football" id="bc2-q9-nP7"/>
+                    <tabBarItem key="tabBarItem" title="" image="football" id="bc2-q9-nP7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHe-3E-UTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="-650"/>
         </scene>
-        <!--Baseball-->
+        <!--Basketball-->
         <scene sceneID="6HA-29-pzw">
             <objects>
-                <viewController id="mzE-sT-DO7" sceneMemberID="viewController">
+                <viewController title="Basketball" id="mzE-sT-DO7" customClass="BasketballVC" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2XX-ZX-Tlg">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Mre-cz-M0k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Baseball" id="Lpc-A6-xho"/>
+                    <tabBarItem key="tabBarItem" title="" image="basketball" id="Lpc-A6-xho"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWw-4M-Yvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,14 +119,14 @@
         <!--Soccer-->
         <scene sceneID="1zt-xg-wUJ">
             <objects>
-                <viewController id="Y0W-y5-hAp" sceneMemberID="viewController">
+                <viewController title="Soccer" id="Y0W-y5-hAp" customClass="SoccerVC" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CoX-iu-bWj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="0X3-93-YFg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Soccer" id="XlJ-LO-D26"/>
+                    <tabBarItem key="tabBarItem" title="" image="soccer" id="XlJ-LO-D26"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbC-VM-LOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,32 +135,32 @@
         <!--Volleyball-->
         <scene sceneID="Y1Z-U7-uwm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxa-3a-538" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="iPy-n0-zBE" sceneMemberID="viewController">
+                <viewController title="Volleyball" id="iPy-n0-zBE" customClass="VolleyballVC" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ue-IZ-LZc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Xxj-dO-GW7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Volleyball" id="hf5-Lv-bhb"/>
+                    <tabBarItem key="tabBarItem" title="" image="volleyball" id="hf5-Lv-bhb"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxa-3a-538" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2687" y="-650"/>
         </scene>
         <!--Hockey-->
         <scene sceneID="6TD-Lm-MN1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xgI-Jm-ykN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="dQJ-p9-kMT" sceneMemberID="viewController">
+                <viewController title="Hockey" id="dQJ-p9-kMT" customClass="HockeyVC" customModule="CollectionTabCreativeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R9O-CU-fxv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5OV-Y6-Fr2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hockey" id="KqM-iA-DLj"/>
+                    <tabBarItem key="tabBarItem" title="" image="hockey" id="KqM-iA-DLj"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgI-Jm-ykN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3400" y="-650"/>
         </scene>
@@ -125,10 +169,10 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B6m-Gg-eH4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="ZqD-sA-lGB">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="ZqD-sA-lGB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="standardAppearance" backgroundImageContentMode="scaleToFill" stackedItemPositioning="fill" stackedItemWidth="5" stackedItemSpacing="0.0"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2v4-ce-pzz"/>
@@ -146,8 +190,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baseball" width="20" height="20"/>
+        <image name="basketball" width="20" height="20"/>
+        <image name="football" width="20" height="12"/>
+        <image name="hockey" width="20" height="20"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="soccer" width="20" height="20"/>
+        <image name="volleyball" width="20" height="20"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
