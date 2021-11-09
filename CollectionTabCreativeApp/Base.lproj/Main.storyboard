@@ -218,7 +218,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="soccer" id="XlJ-LO-D26"/>
                     <connections>
-                        <outlet property="collectionViewOutlet" destination="grW-p8-bXr" id="MfR-fw-hKd"/>
+                        <outlet property="collectionViewOutlet" destination="grW-p8-bXr" id="SLS-Z1-ccQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbC-VM-LOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
