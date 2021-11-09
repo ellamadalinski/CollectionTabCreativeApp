@@ -18,8 +18,6 @@
 		CEBC26712738DFE100825C08 /* FootballVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC26702738DFE100825C08 /* FootballVC.swift */; };
 		CEBC26732738DFF900825C08 /* BasketballVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC26722738DFF900825C08 /* BasketballVC.swift */; };
 		CEBC26752738E01000825C08 /* SoccerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC26742738E01000825C08 /* SoccerVC.swift */; };
-		CEBC26772738E02600825C08 /* VolleyballVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC26762738E02600825C08 /* VolleyballVC.swift */; };
-		CEBC26792738E03F00825C08 /* HockeyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC26782738E03F00825C08 /* HockeyVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +34,6 @@
 		CEBC26702738DFE100825C08 /* FootballVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballVC.swift; sourceTree = "<group>"; };
 		CEBC26722738DFF900825C08 /* BasketballVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballVC.swift; sourceTree = "<group>"; };
 		CEBC26742738E01000825C08 /* SoccerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerVC.swift; sourceTree = "<group>"; };
-		CEBC26762738E02600825C08 /* VolleyballVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolleyballVC.swift; sourceTree = "<group>"; };
-		CEBC26782738E03F00825C08 /* HockeyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +70,6 @@
 				B6B6676627340AA300EF8FF6 /* SceneDelegate.swift */,
 				B6B6676827340AA300EF8FF6 /* ViewController.swift */,
 				B6B6676A27340AA300EF8FF6 /* Main.storyboard */,
-				CEBC26782738E03F00825C08 /* HockeyVC.swift */,
-				CEBC26762738E02600825C08 /* VolleyballVC.swift */,
 				CEBC26742738E01000825C08 /* SoccerVC.swift */,
 				CEBC26722738DFF900825C08 /* BasketballVC.swift */,
 				CEBC26702738DFE100825C08 /* FootballVC.swift */,
@@ -160,7 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBC266F2738DFAB00825C08 /* BaseballVC.swift in Sources */,
-				CEBC26772738E02600825C08 /* VolleyballVC.swift in Sources */,
 				CEBC26752738E01000825C08 /* SoccerVC.swift in Sources */,
 				B6B6676F27340AA300EF8FF6 /* CollectionTabCreativeApp.xcdatamodeld in Sources */,
 				CEBC26732738DFF900825C08 /* BasketballVC.swift in Sources */,
@@ -168,7 +161,6 @@
 				B6B6676527340AA300EF8FF6 /* AppDelegate.swift in Sources */,
 				B6B6676727340AA300EF8FF6 /* SceneDelegate.swift in Sources */,
 				CEBC26712738DFE100825C08 /* FootballVC.swift in Sources */,
-				CEBC26792738E03F00825C08 /* HockeyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
